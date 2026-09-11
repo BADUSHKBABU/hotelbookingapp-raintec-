@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/dashboard_shell.dart';
-import 'theme.dart';
+import 'core/theme.dart';
 
 void main() {
   runApp(const HotelBookingApp());

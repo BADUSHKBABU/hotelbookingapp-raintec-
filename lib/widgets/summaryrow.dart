@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_booking/theme.dart';
+import 'package:hotel_booking/core/theme.dart';
 
 Widget summaryRow(String label, String value) {
   return Padding(

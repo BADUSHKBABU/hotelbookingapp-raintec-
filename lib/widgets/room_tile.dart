@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/room.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 
 /// A single selectable room row, styled after the room-tile look in the
 /// reference dashboard (colored left accent + clear selected state).

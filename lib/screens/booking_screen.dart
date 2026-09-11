@@ -9,7 +9,7 @@ import '../bloc/booking_event.dart';
 import '../bloc/booking_state.dart';
 import '../models/room.dart';
 import '../services/booking_logic.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 import '../widgets/room_tile.dart';
 import '../widgets/section_panel.dart';
 

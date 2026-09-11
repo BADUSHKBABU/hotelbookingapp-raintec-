@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:hotel_booking/theme.dart';
+import 'package:hotel_booking/core/theme.dart';
 
 class DateTimeDisplay extends StatefulWidget {
   const DateTimeDisplay({super.key});

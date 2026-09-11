@@ -27,16 +27,12 @@ class DateValidationResult {
   bool get isInvalid => status == ValidationStatus.invalid;
 }
 
-/// All pure, framework-independent logic for the booking app.
+
 class BookingLogic {
-  /// Strips the time component so comparisons are date-only (00:00:00).
+  // Strips the time component so comparisons are date-only (00:00:00).
   static DateTime dateOnly(DateTime d) => DateTime(d.year, d.month, d.day);
 
-  /// Validates a check-in / check-out pair.
-  /// Rules:
-  ///  - Dates must be selected
-  ///  - check-in cannot be in the past (today is allowed)
-  ///  - check-out must be strictly after check-in (same-day stay is invalid)
+  /// Validates date
   static DateValidationResult validateDates({
     required DateTime? checkIn,
     required DateTime? checkOut,
@@ -55,7 +51,7 @@ class BookingLogic {
     }
 
     if (checkoout.isAtSameMomentAs(checkin)) {
-      return const DateValidationResult.invalid('Check-out date must be after check-in date (same-day stays are not allowed).');
+      return const DateValidationResult.invalid('Check-out date must be after check-in date ');
     }
 
     if (checkoout.isBefore(checkin)) {
@@ -83,14 +79,14 @@ class BookingLogic {
     return nights * room.pricePerNight;
   }
 
-  /// Currency formatting helper (e.g. ₹3,500, ₹11,600).
+  // Currency formatting
   static String formatCurrency(num amount) {
     final str = amount.toInt().toString();
     final regExp = RegExp(r'(\d+?)(?=(\d{3})+(?!\d))');
     return '₹${str.replaceAllMapped(regExp, (m) => '${m[1]},')}';
   }
 
-  /// Bonus: checks whether room is available for the given date range against existing bookings.
+
   static bool isRoomAvailable({
     required Room room,
     required DateTime checkIn,
@@ -111,7 +107,7 @@ class BookingLogic {
     return true;
   }
 
-  /// Filters room list by guest capacity.
+
   static List<Room> filterByGuests(List<Room> rooms, int? guestCount) {
     if (guestCount == null || guestCount <= 0) return rooms;
     return rooms.where((r) => r.maxGuests >= guestCount).toList();

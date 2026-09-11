@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 
 /// A card with a dark navy header bar, mirroring the "1. Select Booking &
 /// Guest" / "2. Review & Update Details" panels in the reference UI.

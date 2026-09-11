@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/widgets/alertdialogue.dart';
 import '../services/booking_logic.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 import '../widgets/section_panel.dart';
 
 class CheckOutScreen extends StatefulWidget {

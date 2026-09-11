@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/widgets/datetimeshowwidget.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 import 'booking_screen.dart';
 import 'checkout_screen.dart';
 import 'main_dashboard_screen.dart';
